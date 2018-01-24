@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="bootstrap-custom.min.css">     
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="translateelement.css"></head>
+    <body class="home" style="position: relative; overflow-y: auto;">
+        <div id="siteContent">
+    <header>
+        <div class="jumbotron x-hidden-focus">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-12 x-hidden-focus">
+                        <h1 class="">Free. Cross-platform. Open source. A developer platform for building <span class="tagline typing">all your</span> apps.</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<script src="jquery-2.1.4.min.js">
+</script>
+<script>
+	$(function() {
+		$(window).width() < 740 || ($(".tagline").addClass("typing"), setTimeout(function() {
+			function i(t, r, u) {
+				r < t.length ? (n.show().html(t.substring(0, r + 1)), setTimeout(function() {
+					i(t, r + 1, u)
+				}, 100)) : typeof u == "function" && setTimeout(u, 2e3)
+			}
+			function r(t, i) {
+				t > 0 ? (n.html(n.html().substring(0, t - 1)), setTimeout(function() {
+					r(t - 1, i)
+				}, 100)) : typeof i == "function" && setTimeout(i, 100)
+			}
+			function u(f) {
+				r(n.html().length, function() {
+					i(t[f], 0, function() {
+						u((f + 1) % t.length)
+					})
+				})
+			}
+			var t = ["web", "mobile", "desktop", "gaming", "IoT", "all your"],
+				n = $(".tagline");
+			u(0)
+		}, 3e3))
+	});
+</script>
+</body>
+</html>
