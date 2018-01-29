@@ -1,63 +1,28 @@
 <!DOCTYPE html>
-<html class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="bootstrap-custom.min.css">     
-    <link type="text/css" rel="stylesheet" charset="UTF-8" href="translateelement.css"></head>
-    <body class="home" style="position: relative; overflow-y: auto;">
-        <div id="siteContent">
-    <header>
-        <div class="jumbotron x-hidden-focus">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-sm-12 x-hidden-focus">
-                        <h1 id="data">
-							<span class="tagline typing">								
-							</span>
-						</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-	</header>
-	
-</div>
-<script src="jquery-3.3.1.min.js">
-</script>
-<script>
-	class Jumbotron{
-		constructor(oringintext1 = "", tagline, oringintext2 = "") {
-			$(function() {
-				document.getElementById("data").innerHTML = oringintext1 + " <span class='tagline typing'>" + tagline + "</span> " + oringintext2;
-			});
-		}
-		start(taglines){
-			$(function() {
-				$(window).width() < 740 || ($(".tagline").addClass("typing"), setTimeout(function() {
-					function i(t, r, u) {
-						r < t.length ? (n.show().html(t.substring(0, r + 1)), setTimeout(function() {
-							i(t, r + 1, u)
-						}, 100)) : typeof u == "function" && setTimeout(u, 2e3)
-					}
-					function r(t, i) {
-						t > 0 ? (n.html(n.html().substring(0, t - 1)), setTimeout(function() {
-							r(t - 1, i)
-						}, 100)) : typeof i == "function" && setTimeout(i, 100)
-					}
-					function u(f) {
-						r(n.html().length, function() {
-							i(t[f], 0, function() {
-								u((f + 1) % t.length)
-							})
-						})
-					}
-					var t = taglines,
-						n = $(".tagline");
-					u(0)
-				}, 3e3))
-			});
-		}
-	}
-	var jumbotron = new Jumbotron("Free. Cross-platform. Open source. A developer platform for building", "all your", "apps.");
-	jumbotron.start(["all your", "web", "mobile", "desktop", "gaming", "IoT"]);
-</script>
+<html class="js">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="bootstrap-custom.min.css"/>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="textchanging.es6"></script>
+</head>
+<body class="home" style="position: relative; overflow-y: auto;">
+    <div id="siteContent">
+		<header>
+			<div class="jumbotron x-hidden-focus">
+				<div class="container text-center">
+					<div class="row">
+						<div class="col-sm-12 x-hidden-focus">
+							<h1>Free. Cross-platform. Open source. A developer platform for building <span id="MyJumbotron">all your</span> apps.</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+	<script>
+		var jumbotron = new Jumbotron($("#MyJumbotron"));
+		jumbotron.start(["all your", "web", "mobile", "desktop", "gaming", "IoT"]);
+	</script>
 </body>
 </html>
