@@ -1,0 +1,22 @@
+{
+  "name": "dynamically-text-changing",
+  "version": "1.0.0",
+  "description": "This about using JS(a little CSS) to make change text dynamically, look the main page of https://www.microsoft.com/net to see more.",
+  "main": "jquery-3.3.1.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anti-Li/Dynamically-Text-Changing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anti-Li/Dynamically-Text-Changing/issues"
+  },
+  "homepage": "https://github.com/Anti-Li/Dynamically-Text-Changing#readme",
+  "devDependencies": {
+    "gulp-uncss": "^1.0.6"
+  }
+}
