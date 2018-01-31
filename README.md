@@ -30,16 +30,18 @@ This about using JS(a little CSS) to make change text dynamically, look the main
 ```
 Coding like these helping Dynamically-Text-Changing to work. You should add
 ```html
-      <div class="jumbotron x-hidden-focus">
-			<div class="container text-center">
-				<h1>$1 <span class="tagline typing">$2</span> $3</h1>
-			</div>
-		</div>
+<!-- in <body> or <header> tag-->
+<div class="jumbotron x-hidden-focus">
+	<div class="container text-center">
+		<h1>$1 <span class="tagline typing">$2</span> $3</h1>
+	</div>
+</div>
 ```
 to  `<body>`($1, $2 and $3 are your own text) and add
 ```javascript
-    var jumbotron = new Jumbotron();
-		jumbotron.start($4);
+//in <script> tag
+var jumbotron = new Jumbotron();
+jumbotron.start($4);
 ```
 to `<script>`($4 is `"$4.1", "$4.2", "$4.3", "$4.4", "$4.5" ······`) in your HTML file.
   
@@ -47,8 +49,8 @@ to `<script>`($4 is `"$4.1", "$4.2", "$4.3", "$4.4", "$4.5" ······`) in yo
   The class ask you to use ECMAScript6.
   ```javascript 
   //textchanging.es6
-  class Jumbotron{
-    constructor(container = $(".tagline")) {}
-    start(...taglines){}
+class Jumbotron{
+	constructor(container = $(".tagline")) {}
+	start(...taglines){}
 }
   ```
