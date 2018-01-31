@@ -1,8 +1,10 @@
 # Dynamically-Text-Changing
 
 This about using JS(a little CSS) to make change text dynamically, look the main page of https://www.microsoft.com/net to see more， because these  pull away and spin off the module of view-source:www.microsoft.com/net. Thanks again for some CSS from MIT and some js from Microsoft.
+> Free. Cross-platform. Open source. A developer platform for building all your apps.
+*From main page of .NET.* :smirk:
 
-##Import to HTML
+## Import to HTML
 ```html
 <!DOCTYPE html>
 <html class="js">
@@ -30,23 +32,23 @@ This about using JS(a little CSS) to make change text dynamically, look the main
 ```
 Coding like these helping Dynamically-Text-Changing to work. You should add
 ```html
-<!-- in <body> or <header> tag-->
+<!-- in <body> or <header> tag -->
 <div class="jumbotron x-hidden-focus">
 	<div class="container text-center">
 		<h1>$1 <span class="tagline typing">$2</span> $3</h1>
 	</div>
 </div>
 ```
-to  `<body>`($1, $2 and $3 are your own text) and add
+to  `<body>`($1, $2 and $3 are your own text which **is showed first**) and add
 ```javascript
 //in <script> tag
 var jumbotron = new Jumbotron();
-jumbotron.start($4);
+jumbotron.start("$4.1", "$4.2", "$4.3", $······);
 ```
-to `<script>`($4 is `"$4.1", "$4.2", "$4.3", "$4.4", "$4.5" ······`) in your HTML file.
+to `<script>`($4.1, $4.1, $4.2, $4.3" are you own text which **changing** when it's time to change text dynamically; $······ represent you can write more there (like $4.4 , $4.5) to transfer more arguments to start method) in your HTML file.
   
-  ##JavaScript Class Declare
-  The class ask you to use ECMAScript6.
+  ## JavaScript Class Declare
+  The class ask you to **use ECMAScript6**.
   ```javascript 
   //textchanging.es6
 class Jumbotron{
