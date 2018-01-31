@@ -35,11 +35,13 @@ Coding like these helping Dynamically-Text-Changing to work. You should add
 				<h1>$1 <span class="tagline typing">$2</span> $3</h1>
 			</div>
 		</div>
-```to  `<body>`($1, $2 and $3 are your own text) and add
+```
+to  `<body>`($1, $2 and $3 are your own text) and add
 ```javascript
     var jumbotron = new Jumbotron();
 		jumbotron.start($4);
-```to `<script>`($4 is `"$4.1", "$4.2", "$4.3", "$4.4", "$4.5" ······`) in your HTML file.
+```
+to `<script>`($4 is `"$4.1", "$4.2", "$4.3", "$4.4", "$4.5" ······`) in your HTML file.
   
   ##JavaScript Class Declare
   The class ask you to use ECMAScript6.
